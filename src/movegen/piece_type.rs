@@ -12,6 +12,7 @@ use crate::magic::{
 };
 
 pub trait PieceType {
+    #[allow(dead_code)]
     fn is(piece: Piece) -> bool;
     fn into_piece() -> Piece;
     fn pseudo_legals(src: Square, color: Color, combined: BitBoard, mask: BitBoard) -> BitBoard;

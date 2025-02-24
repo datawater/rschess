@@ -18,12 +18,13 @@ rust-version = "1.56.0"
 arrayvec = "0.7.2"
 const_for = "0.1.2"
 nodrop = "0.1.14"
-thiserror = "1.0.44"
+serde = { version = "1.0.218", default-features = false, features = ["derive"], optional = true }
+thiserror = "2.0.11"
 
 [profile.release]
 opt-level = 3
 debug = false
-lto = "yes"
+lto = true
 
 [profile.dev]
 opt-level = 3
@@ -42,5 +43,5 @@ opt-level = 3
 
 [build-dependencies]
 const_for = "0.1.2"
-rand = { version = "0.7.2", default-features = false, features = ["small_rng"] }
-thiserror = "1.0.44"
+rand = { version = "0.9.0", default-features = false, features = ["small_rng"] }
+thiserror = "2.0.11"

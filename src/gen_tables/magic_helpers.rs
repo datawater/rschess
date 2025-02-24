@@ -52,7 +52,7 @@ fn bishop_directions() -> Vec<fn(Square) -> Option<Square>> {
 
 // Generate a random bitboard with a small number of bits.
 pub fn random_bitboard<R: Rng>(rng: &mut R) -> BitBoard {
-    BitBoard::new(rng.gen::<u64>() & rng.gen::<u64>() & rng.gen::<u64>())
+    BitBoard::new(rng.random::<u64>() & rng.random::<u64>() & rng.random::<u64>())
 }
 
 // Given a square and the type of piece, lookup the RAYS and remove the endpoint squares.

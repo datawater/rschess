@@ -1,3 +1,5 @@
+#![allow(static_mut_refs)]
+
 use std::fs::File;
 use std::io::Write;
 

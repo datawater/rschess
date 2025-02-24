@@ -4,6 +4,7 @@ use std::ops::Not;
 /// Represent a color.
 #[repr(u8)]
 #[derive(PartialOrd, PartialEq, Eq, Copy, Clone, Debug, Hash)]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub enum Color {
     White = 0,
     Black = 1,

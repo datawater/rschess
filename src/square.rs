@@ -7,6 +7,7 @@ use std::str::FromStr;
 
 /// Represent a square on the chess board
 #[derive(PartialEq, Ord, Eq, PartialOrd, Copy, Clone, Debug, Hash)]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct Square(u8);
 
 /// How many squares are there?

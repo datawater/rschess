@@ -1,3 +1,6 @@
+#![allow(unused_imports)]
+
+#![allow(clippy::module_inception)]
 mod movegen;
 pub use self::movegen::*;
 

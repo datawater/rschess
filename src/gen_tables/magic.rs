@@ -1,5 +1,8 @@
+#![allow(static_mut_refs)]
+
 use rand::rngs::SmallRng;
 use rand::SeedableRng;
+
 use std::fs::File;
 use std::io::Write;
 
@@ -7,6 +10,7 @@ use crate::bitboard::{BitBoard, EMPTY};
 use crate::gen_tables::magic_helpers::{
     magic_mask, questions_and_answers, random_bitboard, NUM_MOVES,
 };
+
 use crate::gen_tables::rays::get_rays;
 use crate::piece::Piece;
 use crate::square::{Square, ALL_SQUARES, NUM_SQUARES};
