@@ -45,3 +45,6 @@ opt-level = 3
 const_for = "0.1.2"
 rand = { version = "0.9.0", default-features = false, features = ["small_rng"] }
 thiserror = "2.0.11"
+
+[features]
+serde = ["dep:serde"]
