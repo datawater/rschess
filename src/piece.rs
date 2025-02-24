@@ -4,7 +4,6 @@ use std::fmt;
 /// Represent a chess piece as a very simple enum
 #[repr(u8)]
 #[derive(PartialEq, Eq, Ord, PartialOrd, Copy, Clone, Debug, Hash)]
-#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub enum Piece {
     Pawn,
     Knight,

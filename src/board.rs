@@ -21,7 +21,6 @@ use std::hash::{Hash, Hasher};
 use std::str::FromStr;
 
 /// A representation of a chess board.  That's why you're here, right?
-#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 #[derive(Copy, Clone, PartialEq, Eq, Debug)]
 pub struct Board {
     pieces: [BitBoard; NUM_PIECES],
@@ -37,7 +36,6 @@ pub struct Board {
 
 /// What is the status of this game?
 #[repr(u8)]
-#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 #[derive(Copy, Clone, PartialEq, PartialOrd, Debug)]
 pub enum BoardStatus {
     Ongoing,

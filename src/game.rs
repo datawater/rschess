@@ -8,7 +8,6 @@ use std::str::FromStr;
 
 /// Contains all actions supported within the game
 #[derive(Copy, Clone, PartialEq, PartialOrd, Debug, Eq)]
-#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub enum Action {
     MakeMove(ChessMove),
     OfferDraw(Color),
@@ -19,7 +18,6 @@ pub enum Action {
 
 /// What was the result of this game?
 #[derive(Copy, Clone, PartialEq, PartialOrd, Eq, Ord, Debug, Hash)]
-#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub enum GameResult {
     WhiteCheckmates,
     WhiteResigns,
@@ -36,7 +34,6 @@ pub enum GameResult {
 /// This structure is slow compared to using `Board` directly, so it is
 /// not recommended for engines.
 #[derive(Clone, Debug)]
-#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct Game {
     start_pos: Board,
     moves: Vec<Action>,
